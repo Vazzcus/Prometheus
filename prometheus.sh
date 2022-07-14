@@ -88,12 +88,10 @@ function installPrometheus() {
             cd /downloads/prometheus
             wget https://github.com/prometheus/prometheus/releases/download/v2.36.2/prometheus-2.36.2.linux-amd64.tar.gz
             # Extract and install prometheus.
-            tar -zxvf prometheus-2.8.0.linux-amd64.tar.gz
             tar -zxvf prometheus-2.36.2.linux-amd64.tar.gz
-            cd prometheus-2.8.0.linux-amd64/
             cd prometheus-2.36.2.linux-amd64/
             install prometheus /usr/local/bin/
-           install promtool /usr/local/bin/
+	    install promtool /usr/local/bin/
             mv consoles /etc/prometheus/
             mv console_libraries /etc/prometheus/
             # Create configuration file.
